@@ -1,0 +1,225 @@
+@import 'base';
+
+.carousel__top {
+    display: flex;
+
+    width: 100%;
+
+    position: absolute;
+    // right: 8.59375vw;
+    // left: 8.59375vw;
+    top: 2.083vw;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-text-stroke: 1px #1E1E2F;
+    text-stroke: 1px #1E1E2F;
+    // text-align: center;
+
+    @include screen992 {
+        -webkit-text-stroke: 0.5px #1E1E2F;
+    }
+
+    @include screen768 {
+        top: 2.5vw;
+        -webkit-text-stroke: 1px #1E1E2F;
+    }
+
+    @include screen576 {
+        -webkit-text-stroke: 0.5px #1E1E2F;
+    }
+
+    &-title {
+        font: {
+            size: 1.6vw;
+            weight: $font-bold;
+        }
+        margin-left: 2.2916vw;
+
+        color: #B9EEFF;
+
+        @include screen768 {
+            font-size: 2.5vw;
+        }
+        
+    }
+
+    &-logo {
+        width: 4.16vw;
+        height: 4.16vw;
+
+        @include screen768 {
+            width: 8vw;
+            height: 8vw;
+        }
+
+        .top__logo-img {
+            @include fit-pic;
+        }
+    }
+}
+
+.carousel__bottom {
+    position: absolute;
+    right: 8.59375vw;
+    left: 8.59375vw;
+    bottom: 3.125vw;
+
+    color: #B9EEFF;
+    -webkit-text-stroke: 1px #1E1E2F;
+    text-stroke: 1px #1E1E2F;
+
+    @include screen992 {
+        -webkit-text-stroke: 0.5px #1E1E2F;
+    }
+
+    @include screen768 {
+        bottom: 4.5vw;
+        -webkit-text-stroke: 1px #1E1E2F;
+    }
+
+    @include screen576 {
+        -webkit-text-stroke: 0.5px #1E1E2F;
+    }
+
+    text-align: center;
+
+    font: {
+        size: 1.875vw;
+        weight: $font-bold;
+
+    }
+    @include screen768 {
+        font-size: 2.7vw;
+    }
+}
+
+.news__cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    @include screen768 {
+        // margin-top: 3.5vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .news__card {
+        display: flex;
+        max-width: 19.0625vw;
+        height: 7vw;
+
+        @include screen1400 {
+            height: 9.9vw;
+        }   
+
+        @include screen992 {
+            height: 12vw;
+        } 
+        @include screen768 {
+            max-width: 35vw;
+            margin-top: 2.5vw;
+        }
+
+        @include screen576 {
+            max-width: fit-content;
+            height: fit-content;
+            margin-top: 2.5vw;
+        }
+
+        background-color: #FDFFFD;
+        border-radius: $radius-15;
+        filter: $shadow;
+        margin-bottom:  0.260416vw;
+
+        &:nth-child(2) {
+            @include screen992 {
+                margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            @include screen1400 {
+                margin-bottom: 0;
+            }
+            @include screen992 {
+                display: none;
+            }
+            @include screen768 {
+                display: flex;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            @include screen1400 {
+                display: none;
+            }
+
+            @include screen768 {
+                display: flex;
+            }
+        }
+    
+        font: {
+            size: $font-16;
+            weight: $font-regular;
+        }
+
+        @include screen1400 {
+            font-size: $font-16-m14;
+            margin-bottom:  0.560416vw;
+
+        }
+
+        @include screen992 {
+            font-size: $font-16-m9;
+        }
+
+        @include screen768 {
+            font-size: $font-16-m7;
+        }
+        
+
+        @include screen1200 {
+            border-radius: $radius-15-12;
+        }
+        @include screen576 {
+            font-size: 2.7vw;
+            border-radius: 1.5vw;
+        }
+    
+        &-link {
+            margin: 1.0416vw;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            
+            @include screen576 {
+                margin: 3vw;
+            }
+        
+        }
+    
+        &-desc {
+            display: flex;
+            width:fit-content;
+            flex-grow: 1;
+            overflow: hidden;
+            
+        }
+    
+        &-date {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            margin-top: 0.260416vw;
+
+            @include screen576 {
+                margin-top: 1.2vw;
+            }
+        }
+    }
+}

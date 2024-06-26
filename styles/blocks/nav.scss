@@ -1,0 +1,200 @@
+@import 'base';
+
+.container__nav {
+    width: fit-content;
+    height: 100%;
+    right: 0;
+    position: absolute;
+}
+
+.nav {
+    position:sticky;
+    // top: 2.86vw + 10.4vw + 3.6vw;
+    top: 0.78125vw;
+    padding: 1.5625vw 1.146vw;
+    border-radius: $radius-40;
+    // height: 51vw;
+    height: fit-content;
+    margin-top: 3.6vw;
+    z-index: 150;
+    width: 16vw;
+    background: $color-menu;
+
+    @include screen768 {
+        margin-top: 7.5vw;
+        padding: 2.6vw;
+        border-radius: 1.8vw;
+        position: sticky;
+        top:0;
+        z-index: 150;
+        // left:  -30vw;
+        // right: 0;
+        // padding-right: 300vw;
+        width: 5.5vw;
+        
+        
+        &:hover {
+            width:30vw; 
+            border: solid white 2px;
+            background-color: #9de3fadd;
+        }
+    }
+
+    &__list {
+        list-style:none;
+        margin:0;
+        padding:0;
+        
+        .el__desc {
+            text-decoration: none;
+            margin-left: 0.8vw;
+            color: $color-font;
+        
+            font: {
+                weight: $font-medium;
+                size: 0.9vw;
+            }
+
+            @include screen992 {
+                font-size: $font-16-m9;
+            }
+
+            @include screen768 {
+                display: none;
+                font-size: $font-16-m7;
+            }     
+        
+        }
+        .el__submenu {
+            // background-color: #DBF6FF;
+            background-color: #B9EEFFBB;
+            border-radius: 1.04vw;
+            list-style:none;
+            // margin-right:-20px;
+            // margin-right: 18vw;
+            padding: 1.5625vw 1.146vw;
+            border: solid white 2px;
+            width: 15vw;
+
+            display: none;
+            // position: absolute;
+            // right: 12vw;
+            // top: 10px;
+            z-index: 120;
+
+            @include screen768 {
+                background-color: #9de3fadd;
+                padding: 2.6vw;
+                width: 25vw;
+            }
+
+
+            .submenu__el {
+                padding-bottom: 0.52vw;
+
+                &-link {
+                    color: $color-font;
+                    font: {
+                        weight: $font-medium;
+                        size: 0.94vw;
+                    }
+
+                    @include screen992 {
+                        font-size: $font-16-m9;
+                    }
+
+                    @include screen768 {
+                        font-size: $font-16-m7;
+                    } 
+                    
+                }
+            }
+        }
+        
+        &-el {
+            padding-bottom: 2.08vw;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            .el__parent {
+                display:flex;
+                text-decoration: none;
+                // justify-content:space-between;                
+            }
+            
+
+            .el__link {
+                display:flex;
+                text-decoration: none;
+                // justify-content:space-between;
+            
+                
+            }
+            
+            .el__icon {
+                min-width: 2.6vw;
+                max-height: 2.6vw;
+                min-height: 2.6vw;
+                background-color: white;
+                border-radius: $radius-10;
+                // margin-top: 0.4vw;
+                text-align: center;
+                overflow: hidden;
+                filter: $shadow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include screen992 {
+                    min-width: 3.5vw;
+                    max-height: 3.5vw;
+                    min-height: 3.5vw;
+            
+                }
+
+                // text-align: center;
+                // vertical-align: middle;
+
+                @include screen768 {
+                    min-width: 5.5vw;
+                    max-height: 5.5vw;
+                    min-height: 5.5vw;
+                    border-radius: $radius-10-7;
+                }
+            
+                &-pic {
+                    width:1.8vw;
+                    height:1.8vw;
+                    object-fit: fill; 
+                    fill:#009FFC;
+
+                    @include screen992 {
+                        width: 2.5vw;
+                        height: 2.5vw;
+                
+                    }
+
+                    @include screen768 {
+                        height: 4vw;
+                        width: 4vw;
+                    }
+                }
+                
+            }
+        
+        
+        }
+        
+        
+    }
+}
+
+// .nav__list-el:hover .el__submenu {
+//     display:block;
+// }
+
+
+
+

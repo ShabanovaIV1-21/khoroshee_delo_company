@@ -1,0 +1,54 @@
+@import 'base';
+
+.header{
+
+    display:flex;
+    align-items: center;
+
+    margin: {
+        top:2.86vw;
+        left: 5.2vw;
+    }
+    
+    @include screen768 {
+        margin-top: 5.2vw;
+        margin-right: 5.2vw;
+    }
+
+
+    &__logo {
+        overflow: hidden;
+        width: 10.4vw;
+        height: 10.4vw;
+        border-radius: $radius-40;
+
+        &-img {
+           @include fit-pic;
+        }
+
+        @include screen768 {
+            width: 15vw;
+            height: 15vw;
+        }
+    }
+    
+    
+    
+    
+    &-text {
+        margin-left: 2.6vw;
+        color: $color-font;
+
+        font: {
+            family: $font;
+            weight: $font-bold;
+            size: 2.5vw;
+        }
+
+        @include screen768 {
+            margin-left: 3.5vw;
+            font-size: 3.4vw;
+        }
+        
+    }
+}

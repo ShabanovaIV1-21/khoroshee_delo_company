@@ -1,0 +1,186 @@
+@import 'base';
+
+.card-person {
+    display: flex;
+    width: 100%;
+
+    margin-bottom: 3.125vw;
+
+    @include screen768 {
+        // margin-bottom: 4.5vw;
+        margin-bottom: 5.2083vw;
+    }
+
+    @include screen576 {
+        flex-direction: column;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .card__column-desc, .card__column-photo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card__column-photo {
+        margin-right: 3.125vw;
+        @include screen576 {
+            margin-right: 0;
+        }
+
+        .column__photo {
+            width: 15.625vw;
+            height: 20.83vw;
+            margin-bottom: 1.0416vw;
+            justify-self: flex-start;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+
+            @include screen768 {
+                width: 24vw;
+                height: 32vw;
+            }
+
+            @include screen576 {
+                width: 74vw;
+                height:96vw;
+                margin-right: 0;
+            }
+
+            &-img {
+                
+                @include fit-pic;
+            }
+        }
+
+        .column__rating {
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+
+            color: #009FFC;
+            font: {
+                weight: $font-bold;
+                size: 1.0416vw;
+            }
+
+            &-line {
+                margin-right: 0.52083vw;
+
+                @include screen768 {
+                    margin-right: 1vw;
+                }
+            }
+
+            @include screen768 {
+                font-size: 2vw;
+            }
+            @include screen576 {
+                font-size: 3.1vw;
+                margin-bottom: 3.2vw;
+            }
+        }
+    }
+
+    .column__name {
+        margin-bottom: 1.8vw;
+        font: {
+            weight: $font-bold;
+            size: 1.25vw;
+        }
+
+        @include screen768 {
+            font-size: 2.2vw;
+            margin-bottom: 2.5vw;
+        }
+        @include screen576 {
+            font-size: 4vw;
+            margin-bottom: 2.7vw;
+          }
+    }
+
+    .column__text {
+        margin-bottom: 1.5625vw;
+        &-line {
+            margin-bottom: 1.0416vw;
+
+            font: {
+                size: $font-16;
+                weight: $font-regular;
+            };
+            
+            @include screen1400 {
+                font-size: $font-16-m14;
+            }
+
+            @include screen992{
+                font-size: $font-16-m9;
+            }
+            @include screen768 {
+                font-size: $font-16-m7;
+                margin-bottom: 1.1vw;
+            }
+            @include screen576 {
+                font-size: 2.7vw;
+                margin-bottom: 1.6vw;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+        
+
+    .column__contact-phone, .column__contact-email, .column__contact-link {
+        display: flex;
+    }
+
+    .column__contact-pic {
+        width: 1.0416vw;
+        height: 1.0416vw;
+        margin-right: 0.572916vw;
+        @include screen768 {
+            width: 1.9vw;
+            height: 1.9vw;
+            margin-right: 1vw;
+        }
+        @include screen576 {
+            width: 3vw;
+            height: 3vw;
+            margin-right: 1.5vw;
+            
+        }
+
+        .contact__pic-img {
+            @include fit-pic;
+            display: block;
+            fill: #1E1E2F;
+        }
+    }
+
+    .column__contact-link {
+        color: #03F0FF;
+        font: {
+            size: $font-16;
+            weight: $font-regular;
+        };
+
+        @include screen1400 {
+            font-size: $font-16-m14;
+        }
+        @include screen768 {
+            font-size: $font-16-m7;
+        }
+        @include screen576 {
+            font-size: 2.7vw;
+        }
+    }
+
+    .column__contact-phone {
+        margin-bottom: 0.572916vw;
+
+    }
+}

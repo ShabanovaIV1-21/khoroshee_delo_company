@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/custom.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hidden-svg" style="height: 0; width: 0; position: absolute; visibility: hidden;">
+        <svg>
+            <symbol id="like" viewBox="0 0 512.000000 512.000000">
+                <linearGradient id="gradient">
+                <stop offset="0" stop-color="#91C041"></stop>
+                <stop offset="100%" stop-color="#419A1F"></stop>
+            </linearGradient>
+        
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="url(#gradient)">
+                    <path d="M3330 4840 c-108 -19 -196 -83 -263 -193 -196 -321 -258 -418 -383
+                    -604 -271 -403 -500 -690 -753 -942 l-154 -153 -29 61 c-33 69 -94 122 -163
+                    141 -28 8 -246 10 -720 8 -680 -3 -680 -3 -721 -25 -54 -29 -117 -101 -132
+                    -151 -9 -29 -12 -357 -12 -1274 l0 -1234 26 -52 c29 -58 69 -96 134 -126 44
+                    -21 56 -21 725 -21 l680 0 57 28 c32 16 72 46 90 67 l33 38 90 -54 c50 -30
+                    106 -59 125 -64 22 -6 466 -10 1201 -10 1292 0 1216 -4 1297 66 22 19 49 53
+                    61 77 11 23 151 596 311 1272 266 1120 292 1236 288 1301 -3 58 -9 80 -33 120
+                    -37 59 -107 108 -175 123 -33 7 -237 11 -580 11 l-529 0 30 88 c44 130 96 332
+                    118 462 52 308 32 535 -65 721 -108 206 -362 353 -554 319z m193 -293 c60 -35
+                    124 -108 153 -174 14 -30 32 -98 41 -151 14 -84 15 -115 4 -227 -19 -212 -74
+                    -438 -172 -703 -61 -167 -64 -209 -15 -258 l34 -34 646 0 c591 0 647 -1 653
+                    -16 5 -14 -544 -2367 -568 -2431 l-9 -23 -1128 0 -1129 0 -126 77 -127 76 0
+                    976 1 976 71 55 c384 297 880 917 1332 1665 60 99 118 190 130 203 42 47 115
+                    44 209 -11z m-1995 -2822 c2 -1100 1 -1181 -15 -1193 -13 -9 -154 -12 -624
+                    -12 -334 0 -614 3 -623 6 -14 6 -16 120 -16 1195 l0 1189 638 -2 637 -3 3
+                    -1180z"/>
+                    <path d="M607 1269 c-222 -54 -301 -324 -142 -484 57 -56 115 -79 205 -79 89
+                    0 156 29 210 90 57 65 73 115 68 209 -5 92 -31 151 -90 201 -66 55 -172 82
+                    -251 63z"/>
+                </g>
+            </symbol>
+        
+            <symbol id="dislike" viewBox="0 0 512.000000 512.000000">
+                <linearGradient id="gradient1">
+                    <stop offset="0" stop-color="#009FFC"></stop>
+                    <stop offset="60%" stop-color="#BCBCBC"></stop>
+                </linearGradient>
+        
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="url(#gradient1)">
+                    <path d="M211 4839 c-56 -11 -124 -51 -155 -92 -59 -78 -56 4 -56 -1338 0
+                    -915 3 -1242 12 -1271 15 -50 78 -122 132 -151 l41 -22 700 0 700 0 53 29 c57
+                    32 93 73 120 137 l18 42 145 -144 c346 -343 694 -810 1083 -1451 111 -184 143
+                    -221 225 -263 113 -57 236 -50 380 21 392 193 472 679 232 1416 l-39 117 557
+                    3 c540 3 557 4 601 24 105 49 160 132 160 242 0 50 -67 347 -290 1289 -160
+                    673 -296 1238 -304 1256 -19 48 -62 94 -115 125 l-46 27 -1170 3 c-643 2
+                    -1189 0 -1211 -3 -25 -3 -82 -30 -140 -64 l-99 -58 -37 42 c-21 24 -60 53 -90
+                    66 l-53 24 -655 2 c-360 0 -675 -3 -699 -8z m1308 -253 c8 -10 10 -329 9
+                    -1192 l-3 -1179 -635 0 -635 0 -3 1184 c-2 941 0 1186 10 1193 7 4 290 8 629
+                    8 507 0 619 -2 628 -14z m2780 -18 c23 -64 573 -2418 568 -2432 -6 -15 -62
+                    -16 -653 -16 l-646 0 -34 -34 c-48 -48 -46 -90 12 -247 142 -387 207 -745 171
+                    -944 -22 -120 -52 -187 -108 -249 -61 -67 -152 -116 -215 -116 -61 0 -83 25
+                    -194 210 -456 761 -973 1407 -1357 1698 l-62 47 -1 976 0 976 123 75 122 76
+                    1133 1 1132 1 9 -22z"/>
+                    <path d="M588 4407 c-203 -58 -274 -308 -133 -465 143 -159 412 -111 479 86
+                    22 63 20 167 -3 218 -59 129 -207 199 -343 161z"/>
+                </g>
+            </symbol>
+        </svg>
+    </div>
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="img/logo.png" alt="logo" class="header__logo-img">
+        </a>
+        <h1 class="header-text">
+            Глобальное образование: <br>
+            ИНДУСТРИЯ ТУРИЗМА И ГОСТЕПРИИМСТВА
+            <!-- дневники дикой природы передачи на тв -->
+        </h1>
+    </header>
+    <div class="container">
+        
+        <div class="container__nav">
+            <aside class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-el">
+                        <div class="el__parent">
+                            <div class="el__icon">
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#1"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">О проекте</div>
+                        </div>
+                        <ul class="el__submenu">
+                            <li class="submenu__el"><a class="submenu__el-link" href="project_organizing.html">Оргкомитет проекта</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный совет</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Научный совет</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Методический совет</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Комиссия жюри</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="project_professional.html">Профессиональный совет</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные центры</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Базы данных</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Ассоциации и объединения</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="project_events.html">План мероприятий проекта</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="project_science_events.html">Событийный календарь</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-el">
+                        <div class="el__parent">
+                            <div class="el__icon">
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#2"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Образование</div>
+                        </div>
+                        <ul class="el__submenu">
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Электронная библиотечная система</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Тренинг-центр преподавателей</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Советы обучающихся</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Общего образования</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Профессионального образования</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Высшего образования</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Средства массовой информации</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Мероприятия</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Барометр образования</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                </ul>
+                            </li>                        
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-el">
+                        <div class="el__parent">
+                            <div class="el__icon">
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#3"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Профориентация</div>
+                        </div>
+                        <ul class="el__submenu">
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Навигатор абитуриента</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Дополнительное образование</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Профессиональное образование</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Высшее образование (бакалавриат)</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Высшее образование (магистратура)</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Дополнительное профессиональное образование</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международное образование</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Родительский совет</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Методический совет учителей</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">По географии</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">По истории</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">По обществознанию</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">По языкознанию</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Инновационные площадки</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Мероприятия</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Барометр профориентации</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Барометр счастья</a></li>                       
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-el">
+                        <div class="el__parent">
+                            <div class="el__icon">
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#4"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Наука</div>
+                        </div>
+                        <ul class="el__submenu">
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Научные школы</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Аспирантам и соискателям</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Аспирантура</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Диссертационные советы</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Реестр кандидатов наук</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Докторантам и соискателям</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Докторантура</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Диссертационные советы</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Реестр докторов наук</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Научные общества</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Школьные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Студенческие</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Издательская и интеллектуальная деятельность</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Издания проекта</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Российские журналы</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные журналы</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Центр интеллектуальной собственности</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Мероприятия</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Барометр научной деятельности</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                </ul>
+                            </li>                     
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-el">
+                        <div class="el__parent">
+                            <div class="el__icon">
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#5"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Практика</div>
+                        </div>
+                        <ul class="el__submenu">
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Фонд</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Попечительский совет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Деятельность фонда</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Гранты</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Практика студентов</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Центры профориентации</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Места практик и стажировок</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Программы прохождении практик</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Кадровый резерв</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Бизнес-инкубатор</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Волонтерство</a></li>
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Банк вакансий</a></li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Мероприятия</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu__el">
+                                <span class="submenu__el-link">Барометр практической деятельности</span>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                </ul>
+                            </li>                     
+                            <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-el">
+                        <a class="el__link" href="">
+                            <div class="el__icon">
+                                <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#6"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Календарь науч./обр. мероп.</div>
+                        </a>
+                    </li>
+                    <li class="nav__list-el">
+                        <a class="el__link" href="">
+                            <div class="el__icon">
+                                <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#7"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">“Клубок” компетенций Векторная библ.</div>
+                        </a>
+                    </li>
+                    <li class="nav__list-el">
+                        <a class="el__link" href="">
+                            <div class="el__icon">
+                                <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#8"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Навигатор абитуриента</div>
+                        </a>
+                    </li>
+                    <li class="nav__list-el">
+                        <a class="el__link" href="">
+                            <div class="el__icon">
+                                <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#9"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Банк вакансий</div>
+                        </a>
+                    </li>
+                    <li class="nav__list-el">
+                        <a class="el__link" href="">
+                            <div class="el__icon">
+                                <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                <svg class="el__icon-pic">
+                                    <use xlink:href="img/sprite-nav.svg#10"></use>
+                                </svg>
+                            </div>
+                            <div class="el__desc">Опубликовать статью</div>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </aside>
+        </div>
+
+        <main class="main">
+            <div class="main__section">
+                <h2 class="title">КАЛЕНДАРЬ НАУЧНО-ОБРАЗОВАТЕЛЬНЫХ МЕРОПРИЯТИЙ</h2>
+                    
+                <p class="main__section-paragraph">
+                    Перечень образовательных, профориентационных, научных и практико-ориентированных мероприятий, реализуемый иными организациями, утверждается ежегодно 10 января. Сбор предложений – до 30 декабря.
+            </div>
+
+            <div class="main__section">
+                <div class="main__section-cards all">
+                    <div class="card-AAA">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/logo.png" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <div class="card__project">
+                                <div class="card__project-tick">
+                                    <svg class="tick-pic">
+                                        <use xlink:href="img/sprite-card.svg#tick"></use>
+                                    </svg>
+                                </div>
+                                <div class="card__project-line">Входит в проект</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-AAA">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/1.jpg" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <div class="card__project">
+                                <div class="card__project-tick">
+                                    <svg class="tick-pic">
+                                        <use xlink:href="img/sprite-card.svg#tick"></use>
+                                    </svg>
+                                </div>
+                                <div class="card__project-line">Входит в проект</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-AAA">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/2.jpg" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <div class="card__project">
+                                <div class="card__project-tick">
+                                    <svg class="tick-pic">
+                                        <use xlink:href="img/sprite-card.svg#tick"></use>
+                                    </svg>
+                                </div>
+                                <div class="card__project-line">Входит в проект</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                    
+                    <div class="card-AAA-event">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/logo.png" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__text">
+                                <div class="card__text-title">ОРГАНИЗАТОР:</div>
+                                <div class="card__text-line">АНО “Хорошее дело”</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-AAA-event">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/2.jpg" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__text">
+                                <div class="card__text-title">ОРГАНИЗАТОР:</div>
+                                <div class="card__text-line">АНО “Хорошее дело”</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-AAA-event">
+                        <a href="" class="card__link">
+                            <svg class="card__link-img">
+                                <use xlink:href="img/sprite-card.svg#link"></use>
+                            </svg>
+                        </a>
+                        <div class="card__pic">
+                            <img src="img/1.jpg" alt="" class="card__pic-img">
+                        </div>
+                        <div class="card__container">
+                            <div class="card__header">
+                                Туристский диктант<br>
+                                <span class="card__header-title">"ТУРИЗМ И ГОСТЕПРИИМСТВО"</span>
+                            </div>
+                            <div class="card__category">
+                                <div class="card__category-section">
+                                    <div class="card__category-button"><span>Образование</span></div>
+                                    <div class="card__category-button"><span>СМИ</span></div>
+                                </div>
+                                <div class="card__category-status">
+                                    <div class="card__category-button"><span>Всероссийский</span></div>
+                                    <div class="card__category-button"><span>Международный</span></div>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text-line">С 1 декабря по 17 мая 2024</div>
+                                <div class="card__text-line">для обучающихся 14-35 лет</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__text">
+                                <div class="card__text-title">ОРГАНИЗАТОР:</div>
+                                <div class="card__text-line">АНО “Хорошее дело”</div>
+                                <div class="card__text-line">Российская Федерация</div>
+                            </div>
+                            <hr>
+                            <div class="card__register">Зарегистрироваться</div>
+                            <div class="card__bottom">
+                                <div class="card__bottom-people">
+                                    <div class="people__icon">
+                                        <svg class="people__icon-pic">
+                                            <use xlink:href="img/sprite-card.svg#people"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="people__amount">89</div>
+                                </div>
+                                <div class="card__bottom-vote">
+                                    <div class="vote__like">
+                                        <div class="like__icon">
+                                            <svg class="like__icon-pic">
+                                                <use xlink:href="#like"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="like__amount">290</div>
+                                    </div>
+                                    <div class="vote__dislike">
+                                        <div class="dislike__icon">
+                                            <svg class="dislike__icon-pic">
+                                                <use xlink:href="#dislike"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dislike__amount">456</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__icons">
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/1.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/2.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/3.svg" class="icons__link-pic">
+            </a>
+        </div>
+        <div class="footer__text">АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ РАЗВИТИЯ И ПОПУЛЯРИЗАЦИИ ПРОФЕССИЙ "ХОРОШЕЕ ДЕЛО" © 2018-2024</div>
+        <div class="footer__icons">
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/4.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/5.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/6.svg" class="icons__link-pic">
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/nav.js"></script>
+    <script src="script/lottie.js"></script>
+    
+</body>
+</html>

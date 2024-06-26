@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+// @import '../../scss/bootstrap.scss';
+
+$font: "JetBrains Mono";
+$font-bold: 700;
+$font-medium: 500;
+$font-light: 300;
+$font-regular: 400;
+
+$font-16: 0.83vw;
+$font-14: 0.72916vw;
+$font-12: 0.625vw;
+
+$font-16-m14: 1.1vw;
+$font-14-m14: 0.9vw;
+
+$font-16-m9: 1.2vw;
+$font-14-m9: 1vw;
+
+$font-16-m7: 1.75vw;
+$font-14-m7: 1.6vw;
+
+$color-menu: #B9EEFF;
+$color-button: #009FFC;
+
+$color-font: #1E1E2F;
+
+$radius-40: 2.1vw;
+$radius-10: 0.52vw;
+$radius-25: 1.3vw;
+$radius-15: 0.78125vw;
+
+$radius-15-12: 1.25vw;
+$radius-10-7: 1.3vw;
+
+
+$shadow: drop-shadow(4px 8px 5.6px rgba(0, 0, 0, 0.08));
+
+
+@mixin screen1400 {
+  @media screen and (max-width: 1400px) {
+      @content;
+  }
+}
+
+@mixin screen1200 {
+  @media screen and (max-width: 1200px) {
+      @content;
+  }
+}
+
+@mixin screen992 {
+  @media screen and (max-width: 992px) {
+      @content;
+  }
+}
+
+@mixin screen768 {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screen576 {
+  @media screen and (max-width: 576px) {
+      @content;
+  }
+}
+
+@mixin screen320 {
+  @media screen and (max-width: 320px) {
+      @content;
+  }
+}
+
+
+@mixin fit-pic () {
+    max-width:100%;
+    max-height:100%;
+    object-fit: fill
+}
+
+@mixin contain-pic () {
+  max-width:100%;
+  max-height:100%;
+  object-fit: contain;
+}
+
+@mixin button () {
+  background-color: $color-button;
+  border-radius: $radius-10;
+  color: white;
+  width: fit-content;
+  text-align: center;
+  filter: $shadow;
+  font-size: $font-16;
+
+  @include screen1400 {
+    font-size: $font-16-m14;
+  }
+  @include screen992 {
+    font-size: $font-16-m9;
+  }
+  @include screen768 {
+    font-size: 1.5vw;
+    border-radius: $radius-10-7;
+  }
+
+  @include screen576 {
+    font-size: 2.7vw;
+    border-radius: 1.8vw;
+  }
+}
+    
+
+
+
+
+* {
+    box-sizing:content-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a  {
+  text-decoration: none;
+  color: $color-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0;
+  margin-block: 0px;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+
+    margin: 0 5.2vw 5.2vw 5.2vw;
+    padding: 0px;
+    font-family: $font;
+    color: $color-font;
+
+    // @include screen992() {
+    //   background-color: #B9EEFF;
+    // }
+
+    // @include screen768 {
+    //     justify-content: flex-end;
+    //     background-color: antiquewhite;
+    // }
+    // @include screen576 {
+    //   background-color: #009FFC;
+    // }
+    // @include screen320() {
+    //   background-color: aqua;
+    // }
+    
+    
+}
+
+.main {
+    // margin-right:5vw;
+
+    flex-grow: 1;
+    // @include screen768 {
+    //   margin-right: 2.4vw;
+    // }
+
+
+    &__section {
+      width: 67vw;
+      margin-top: 3.6vw;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include screen768 {
+        margin-top: 7.5vw;
+        width: 74vw;
+      } 
+
+      &-paragraph {
+        align-self: flex-start;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0.83vw;
+        line-height: 1.2;
+        font: {
+          weight: $font-medium;
+          size: $font-16;
+        }
+
+        @include screen1400 {
+          font-size: $font-16-m14;
+        }
+
+        @include screen768 {
+          font-size: $font-16-m7;
+          padding-bottom: 2.083vw;
+        } 
+        @include screen576 {
+          font-size: 2.7vw;
+        }
+      }
+
+      &-list {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0.83vw;
+        font: {
+          weight: $font-medium;
+          size: $font-16;
+        }
+        line-height: 1.5;
+
+        .section__list-line, .section__list-title {
+        line-height: 1.5;
+          @include screen1400 {
+            font-size: $font-16-m14;
+          }
+          @include screen768 {
+            font-size: $font-16-m7;
+          }
+          @include screen576 {
+            font-size: 2.7vw;
+          }
+        }
+
+        @include screen768 {
+          padding-bottom: 2.083vw;
+        }
+
+        
+      }
+
+      &-cards {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: fit-content;
+      }
+
+      &-groups {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        max-height: fit-content;
+        margin-bottom: 3.125vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include screen1200 {
+          margin-bottom: 3.6vw;
+        }
+
+        @include screen768 {
+          // margin-bottom: 4.5vw;
+          margin-bottom: 5.2083vw;
+        }
+      }
+
+      &-news {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        @include screen768() {
+          flex-direction: column;
+        }
+      }
+    }
+}
+
+.title {
+
+  text-align: center;
+  font: {
+      weight: $font-bold;
+      size: 2.1vw;
+  }
+  margin-bottom: 2.9vw;
+  
+
+  @include screen768 {
+    font-size: 3vw;
+    margin-bottom: 4.7vw;
+  }
+  @include screen576 {
+    font-size: 4.5vw;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1.302083vw;
+
+  font: {
+    size: 1.875vw;
+    weight: $font-bold;
+  }
+
+  @include screen1400 () {
+    margin-bottom: 1.8vw;
+  };
+
+  @include screen768 {
+    font-size: 2.5vw;
+    margin-bottom: 3.25vw;
+  }
+  @include screen576 {
+    font-size: 4vw;
+    margin-bottom: 3.25vw;
+  }
+}
+
+.button-watch-more {
+  @include button;
+  padding: 0.46875vw 1.35416vw;
+  font-weight: $font-medium;
+  margin-top: 1.5625vw;
+  // align-self: center;
+
+  @include screen768 {
+    padding: 1.171875vw 3.385416vw;
+    margin-top: 3.90625vw;
+  }
+
+  @include screen576 {
+    padding: 2vw 4vw;
+    margin-top: 4vw;
+  }
+}
+
+
+
+
+
+/* MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+// .menu-wrap .menu > div > div > ul > li {
+//   list-style: none;
+//   color: #fff;
+//   font-size: 1.5rem;
+//   padding: 1rem;
+// }
+
+// .menu-wrap .menu > div > div > ul > li > a {
+//   color: inherit;
+//   text-decoration: none;
+//   transition: color 0.4s ease;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Оформление el__submenu */
+// .nav .el__submenu {
+//     background: #f5f5f5;
+//     border: 1px solid #f5f5f5;
+//   }
+  /* Офррмление подпунктов */
+  // .nav .el__submenu li a{
+  //   color: #555;
+  //   background: rgba(0, 0, 0, 0);
+  // }
+  /* Офррмление подпунктов при наведении */
+  // .nav .el__submenu li a:hover{
+  //   color: #fff;
+  //   background: #555;
+  // }
+  /* Разделитель для пунктов sub-menu */
+  // .nav .sub-menu > li + li > a {
+  //   border-top: 1px solid #fff;
+  //   box-shadow: 0 -1px 0 #ddd;
+  //   padding-left: 40px  /* Добавляем отступ для подпунктов */
+  // }
+  /* Разделитель пунктов меню */
+// .nav > ul > li + li > a {
+//     border-top: 1px solid rgba(255, 255, 255, 0.1);
+//     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+//  }
+  /* Оформление пункта */
+  /*.nav > ul > li > a {
+    color:#999;
+    background: rgba(0, 0, 0, 0);
+  }*/
+  /* Подсветка пункта при наведении */
+  // .el__link:hover {
+  //   color: #af1f1f;
+  //   background: rgba(0, 0, 0, 0.1);
+  // }
+  /* Активный пункт */
+  // .nav > ul > li.active > a,
+  // .nav > ul > li.active > a:hover {
+  //   color:#fff;
+  //   background:rgba(0, 0, 0, 0.4);
+  // }
+  /* Убираем маркеры и отступы */
+//   .nav__list li {
+//     margin:0;
+//     padding:0;
+//     position:relative;
+//   }
+  /* Общие правила для пунктов меню */
+  // .nav__list li a {
+  //   display:block;
+  //   margin:0;
+  //   padding:12px 20px;
+  //   text-decoration: none;
+  // }
+  /*Наведение на активный пункт меню - курсор обычный */
+  // .nav__list li.active > a:hover {
+  //   cursor: default;
+  // }
+  /*Общие*/
+// .nav__list .el__submenu {
+//   // left: 100%;
+//     // margin-right: 100px;
+//     display: none;
+//     position: absolute;
+//     right: 50px;
+//     top: 0;
+//     z-index: 9999;
+//   } 
+  /* Вывод */
+// .el__parent:hover{
+//   color:#003041;
+//     display: block;
+  
+//   }
+  /* со смещением вправо */
+  /* Оформление пункта */
+// .nav >  ul >  li >  a {
+//     color: #c70202;  
+//     background: rgba(0, 0, 0, 0);
+   
+//     /* добавляем код */
+//     -webkit-transition: all .3s;
+//     -moz-transition: all .3s;
+//     -o-transition: all .3s;
+//     transition: all .3s;
+//   }
+   
+  /* Офррмление подпунктов */
+  // .nav .el__submenu li a{
+  //    color: #555;
+  //    background: rgba(0, 0, 0, 0);
+   
+  //   /* добавляем код */
+  //   -webkit-transition: all .3s;
+  //   -moz-transition: all .3s;
+  //   -o-transition: all .3s;
+  //   transition: all .3s;
+  // }

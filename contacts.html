@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/custom.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="img/logo.png" alt="logo" class="header__logo-img">
+        </a>
+        <h1 class="header-text">
+            Глобальное образование: <br>
+            ИНДУСТРИЯ ТУРИЗМА И ГОСТЕПРИИМСТВА
+            <!-- дневники дикой природы передачи на тв -->
+        </h1>
+    </header>
+    <div class="container">
+        
+        <div class="container__nav">
+            <aside class="nav">
+                <input type="hidden" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
+                <div>
+                    <div>
+                        <ul class="nav__list">
+                            <li class="nav__list-el">
+                                <div class="el__parent">
+                                    <div class="el__icon">
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#1"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">О проекте</div>
+                                </div>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="project_organizing.html">Оргкомитет проекта</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный совет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Научный совет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Методический совет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Комиссия жюри</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="project_professional.html">Профессиональный совет</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Региональные центры</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Базы данных</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Ассоциации и объединения</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="project_events.html">План мероприятий проекта</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="project_science_events.html">Событийный календарь</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="contacts.html">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__list-el">
+                                <div class="el__parent">
+                                    <div class="el__icon">
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#2"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Образование</div>
+                                </div>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Электронная библиотечная система</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Тренинг-центр преподавателей</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Советы обучающихся</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Общего образования</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Профессионального образования</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Высшего образования</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Средства массовой информации</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Мероприятия</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Барометр образования</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                        </ul>
+                                    </li>                        
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__list-el">
+                                <div class="el__parent">
+                                    <div class="el__icon">
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#3"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Профориентация</div>
+                                </div>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Навигатор абитуриента</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Дополнительное образование</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Профессиональное образование</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Высшее образование (бакалавриат)</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Высшее образование (магистратура)</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Дополнительное профессиональное образование</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международное образование</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Родительский совет</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Методический совет учителей</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">По географии</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">По истории</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">По обществознанию</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">По языкознанию</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Инновационные площадки</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Мероприятия</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Барометр профориентации</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Барометр счастья</a></li>                       
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__list-el">
+                                <div class="el__parent">
+                                    <div class="el__icon">
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#4"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Наука</div>
+                                </div>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Научные школы</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Аспирантам и соискателям</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Аспирантура</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Диссертационные советы</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Реестр кандидатов наук</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Докторантам и соискателям</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Докторантура</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Диссертационные советы</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Реестр докторов наук</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Научные общества</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Школьные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Студенческие</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Издательская и интеллектуальная деятельность</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Издания проекта</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Российские журналы</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные журналы</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Центр интеллектуальной собственности</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Мероприятия</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Барометр научной деятельности</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                        </ul>
+                                    </li>                     
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__list-el">
+                                <div class="el__parent">
+                                    <div class="el__icon">
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#5"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Практика</div>
+                                </div>
+                                <ul class="el__submenu">
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Фонд</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Попечительский совет</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Деятельность фонда</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Гранты</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Практика студентов</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Центры профориентации</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Места практик и стажировок</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Программы прохождении практик</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Кадровый резерв</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Бизнес-инкубатор</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Волонтерство</a></li>
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Банк вакансий</a></li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Мероприятия</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Международные</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Всероссийские</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Региональные</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__el">
+                                        <span class="submenu__el-link">Барометр практической деятельности</span>
+                                        <ul class="el__submenu">
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Экспертный центр</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Общий зачет</a></li>
+                                            <li class="submenu__el"><a class="submenu__el-link" href="">Индивидуальный зачет</a></li>
+                                        </ul>
+                                    </li>                     
+                                    <li class="submenu__el"><a class="submenu__el-link" href="">Годовой отчет</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__list-el">
+                                <a class="el__link" href="">
+                                    <div class="el__icon">
+                                        <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#6"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Календарь науч./обр. мероп.</div>
+                                </a>
+                            </li>
+                            <li class="nav__list-el">
+                                <a class="el__link" href="">
+                                    <div class="el__icon">
+                                        <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#7"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">“Клубок” компетенций Векторная библ.</div>
+                                </a>
+                            </li>
+                            <li class="nav__list-el">
+                                <a class="el__link" href="">
+                                    <div class="el__icon">
+                                        <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#8"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Навигатор абитуриента</div>
+                                </a>
+                            </li>
+                            <li class="nav__list-el">
+                                <a class="el__link" href="">
+                                    <div class="el__icon">
+                                        <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#9"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Банк вакансий</div>
+                                </a>
+                            </li>
+                            <li class="nav__list-el">
+                                <a class="el__link" href="">
+                                    <div class="el__icon">
+                                        <!-- <img src="img/1.svg" alt="" class="el__icon-pic"> -->
+                                        <svg class="el__icon-pic">
+                                            <use xlink:href="img/sprite-nav.svg#10"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="el__desc">Опубликовать статью</div>
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+            </aside>
+        </div>
+
+        <main class="main">
+            
+            <div class="main__section">
+                <h2 class="title">КОНТАКТЫ</h2>
+                <div class="main__contacts">
+                    <div class="contacts__column-address">
+                        <div class="contacts__card">
+                            <div class="contacts__card-icon">
+                                <svg class="card__icon-img">
+                                    <use xlink:href="img/sprite-contacts.svg#fact-address"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__card-info">
+                                <div class="card__info-title">Юридический адрес:</div>
+                                <div class="card__info-desc">194363, г. Санкт-Петербург, п. Парголово, ул. Ф. Абрамова,<br>д. 16, корп. 1, лит. «А», кв. 1130</div>
+                            </div>
+                        </div>
+
+                        <div class="contacts__card">
+                            <div class="contacts__card-icon">
+                                <svg class="card__icon-img">
+                                    <use xlink:href="img/sprite-contacts.svg#address"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__card-info">
+                                <div class="card__info-title">Фактический адрес:</div>
+                                <div class="card__info-desc">194363, г. Санкт-Петербург, п. Парголово, ул. Ф. Абрамова,<br>д. 16, корп. 1, лит. «А», кв. 1130</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="contacts__column">
+                        <div class="contacts__card">
+                            <div class="contacts__card-icon">
+                                <svg class="card__icon-img">
+                                    <use xlink:href="img/sprite-contacts.svg#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__card-info">
+                                <div class="card__info-title">Телефон:</div>
+                                <a href="tel:+7 (950) 320-78-60" class="card__info-desc">+7 (950) 320-78-60</a>
+                            </div>
+                        </div>
+
+                        <div class="contacts__card">
+                            <div class="contacts__card-icon">
+                                <svg class="card__icon-img">
+                                    <use xlink:href="img/sprite-contacts.svg#email"></use>
+                                </svg>
+                            </div>
+                            <div class="contacts__card-info">
+                                <div class="card__info-title">E-mail:</div>
+                                <a href="mailto:official@edutourlab.ru" class="card__info-desc">official@edutourlab.ru</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>                
+            </div>
+
+            <div class="main__section">
+                <div class="main__social">
+                    <div class="contacts__card">
+                        <div class="contacts__card-icon">
+                            <svg class="card__icon-img">
+                                <use xlink:href="img/sprite-contacts.svg#telegram"></use>
+                            </svg>
+                        </div>
+                        <div class="contacts__card-info">
+                            <div class="card__info-title">Телеграмм:</div>
+                            <a href="https://t.me/EDUTourLab" class="card__info-desc">https://t.me/EDUTourLab</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts__card">
+                        <div class="contacts__card-icon">
+                            <svg class="card__icon-img">
+                                <use xlink:href="img/sprite-contacts.svg#youtube"></use>
+                            </svg>
+                        </div>
+                        <div class="contacts__card-info">
+                            <div class="card__info-title">YouTube:</div>
+                            <a href="https://youtube.com/@EDUTourLab" class="card__info-desc">https://youtube.com/@EDUTourLab</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts__card">
+                        <div class="contacts__card-icon">
+                            <svg class="card__icon-img">
+                                <use xlink:href="img/sprite-contacts.svg#vk"></use>
+                            </svg>
+                        </div>
+                        <div class="contacts__card-info">
+                            <div class="card__info-title">ВКонтакте:</div>
+                            <a href="https://vk.com/edutourlab" class="card__info-desc">https://vk.com/edutourlab</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__icons">
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/1.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/2.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/3.svg" class="icons__link-pic">
+            </a>
+        </div>
+        <div class="footer__text">АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ РАЗВИТИЯ И ПОПУЛЯРИЗАЦИИ ПРОФЕССИЙ "ХОРОШЕЕ ДЕЛО" © 2018-2024</div>
+        <div class="footer__icons">
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/4.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/5.svg" class="icons__link-pic">
+            </a>
+            <a href="" class="footer__icons-link">
+                <img src="img/soc/6.svg" class="icons__link-pic">
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/nav.js"></script>
+    <script src="script/lottie.js"></script>
+    
+</body>
+</html>
